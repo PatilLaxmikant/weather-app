@@ -56,6 +56,9 @@ npm run dev
 ## 🔗 API Reference
 The app fetches weather data from OpenWeather API: https://api.openweathermap.org/
 
+## 🔗 Live Demo
+https://weather-app-laxmikant-patil.vercel.app/
+
 ## 👤 Author
 - **Laxmikant Patil** - [GitHub](https://github.com/PatilLaxmikant)
 
