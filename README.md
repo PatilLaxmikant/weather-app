@@ -14,6 +14,7 @@ A simple and stylish weather application built with React that fetches real-time
 - **React Icons** - Weather icons
 
 ## 📂 Project Structure
+```sh
 /weather-app
 │── /src
 │   │── /components
@@ -23,7 +24,7 @@ A simple and stylish weather application built with React that fetches real-time
 │── index.html           # Entry point
 │── package.json         # Dependencies
 │── vite.config.js       # Configuration file
-
+```
 ## 🏗 Setup & Installation
 
 1️⃣ Clone the repository  
