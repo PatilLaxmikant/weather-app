@@ -37,7 +37,7 @@ const Weather = () => {
         if (event.key === "Enter") {
             searchWeather();
         }
-    };
+    }; 
 
 
     const searchWeather = async () => {
@@ -68,7 +68,7 @@ const Weather = () => {
     return (
         <div className="weather-container">
             <h1>Weather App</h1>
-            
+            {/* Input container */}
             <div className="search-bar">
                 <input
                     type="text"
@@ -83,23 +83,24 @@ const Weather = () => {
                 </div>
             </div>
 
+            {/* loading container */}
             {loading && <p className="loading">Loading...</p>}
+
+            {/* error container */}
             {error && <p className="error">{error}</p>}
 
+            {/* Output container */}
             {weatherData && (
                 <div className="weather-icon">
                     <div className="icon">
                         {getWeatherIcon(weatherData.weather[0].main)}
                         <p>{weatherData.weather[0].main}</p>
                     </div>
-
+ 
                     <div className="weather-info">
                         <h2 className="location">{weatherData.name}</h2>
                         <p className="temp">{weatherData.main.temp}°C</p>
                     </div>
-                    {/* <p className='time'>
-                        <span>{moment().format('dddd MMM YYYY')}</span>
-                    </p> */}
                     
 
                     <div className="weather-data">
