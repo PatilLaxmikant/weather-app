@@ -1,21 +1,19 @@
-🌤 Weather App
+# 🌤 Weather App
 A simple and stylish weather application built with React that fetches real-time weather data using the OpenWeather API.
 
-🚀 Features
-🌍 Search weather by city name
-🌞 Displays current temperature, weather condition, humidity, and wind speed
-🎨 Beautiful UI with animated weather icons
-⚡ Instant search with "Enter" key support
-🔥 Responsive design for mobile and desktop
-🛠 Tech Stack
-React.js - Frontend framework
-OpenWeather API - Weather data provider
-React Icons - Weather icons
-CSS - Custom styling
-📂 Project Structure
-bash
-Copy
-Edit
+## 🚀 Features
+- 🌍 Search weather by city name
+- 🌞 Displays temperature, weather conditions like humidity and wind speed
+- 🎨 Responsive design with animated weather icons
+- ⚡ Instant search with "Enter" key support
+
+## 🛠 Tech Stack
+- **React.js** - Frontend framework
+- **OpenWeather API** - Weather data provider
+- **CSS** - Styling
+- **React Icons** - Weather icons
+
+## 📂 Project Structure
 /weather-app
 │── /src
 │   │── /components
@@ -25,38 +23,39 @@ Edit
 │── index.html           # Entry point
 │── package.json         # Dependencies
 │── vite.config.js       # Configuration file
-🏗 Setup & Installation
-1️⃣ Clone the repository
 
-sh
-Copy
-Edit
-git clone https://github.com/your-username/weather-app.git
+## 🏗 Setup & Installation
+
+1️⃣ Clone the repository  
+```sh
+git clone https://github.com/PatilLaxmikant/weather-app.git
 cd weather-app
+```
 2️⃣ Install dependencies
-
-sh
-Copy
-Edit
+```sh
 npm install
-3️⃣ Create an .env file in the root directory and add your OpenWeather API key:
-
-sh
-Copy
-Edit
+```
+3️⃣ Create a .env file and add API keys
+Create or Replace a `.env` file in the root directory and add:
+```sh
 VITE_APP_API=your_openweather_api_key
-4️⃣ Run the development server
+```
 
-sh
-Copy
-Edit
+4️⃣ Start the development server
+```sh
 npm run dev
+```
+
 5️⃣ Open http://localhost:5173 in your browser 🎉
+### 🔥 How to Use
+- Open the app and enter a city name in the search bar.
+- Press **Enter** or click the search button.
+- The app will display the weather details.
 
-📌 Environment Variables
-The app requires an API key from OpenWeather. Sign up, get the API key, and add it to the .env file.
+## 🔗 API Reference
+The app fetches weather data from OpenWeather API: https://api.openweathermap.org/
 
-🤝 Contributing
-Feel free to fork the repo, create a feature branch, and submit a PR!
+## 👤 Author
+- **Laxmikant Patil** - [GitHub](https://github.com/PatilLaxmikant)
 
-Would you like me to add anything else? 🚀
+
