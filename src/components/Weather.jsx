@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     WiDaySunny,
     WiCloud,
@@ -15,6 +15,21 @@ const Weather = () => {
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [date, setDate] = useState("");
+
+    // Get current date
+    useEffect(() => {
+        const today = new Date();
+        const options = { weekday: "long", month: "long", day: "2-digit", year: "numeric" };
+        setDate(today.toLocaleDateString(undefined, options));
+    }, []);
+
+    // Toggle Dark Mode
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
+        document.body.classList.toggle("dark-mode");
+    };
 
     const getWeatherIcon = (weather) => {
         switch (weather) {
@@ -37,8 +52,7 @@ const Weather = () => {
         if (event.key === "Enter") {
             searchWeather();
         }
-    }; 
-
+    };
 
     const searchWeather = async () => {
         if (!city) {
@@ -66,8 +80,15 @@ const Weather = () => {
     };
 
     return (
-        <div className="weather-container">
+        <div className={`weather-container ${isDarkMode ? "dark-mode" : ""}`}>
             <h1>Weather App</h1>
+            <p className="date">{date}</p>
+
+            {/* Dark Mode Toggle */}
+            <button className="toggle-button" onClick={toggleDarkMode}>
+                {isDarkMode ? "Light Mode" : "Dark Mode"}
+            </button>
+
             {/* Input container */}
             <div className="search-bar">
                 <input
@@ -90,18 +111,17 @@ const Weather = () => {
             {error && <p className="error">{error}</p>}
 
             {/* Output container */}
-            {weatherData && (
+            {!error && weatherData && (
                 <div className="weather-icon">
                     <div className="icon">
                         {getWeatherIcon(weatherData.weather[0].main)}
                         <p>{weatherData.weather[0].main}</p>
                     </div>
- 
+
                     <div className="weather-info">
                         <h2 className="location">{weatherData.name}</h2>
                         <p className="temp">{weatherData.main.temp}°C</p>
                     </div>
-                    
 
                     <div className="weather-data">
                         <div className="col">
@@ -118,7 +138,6 @@ const Weather = () => {
                             <p>{weatherData.wind.speed} km/h</p>
                             <span>Wind Speed</span>
                         </div>
-
                     </div>
                 </div>
             )}
@@ -127,3 +146,4 @@ const Weather = () => {
 };
 
 export default Weather;
+
