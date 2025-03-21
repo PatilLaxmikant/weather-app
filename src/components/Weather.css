@@ -169,3 +169,62 @@
         width: 100%;
     }
 }
+
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: #222;
+  color: #f0f0f0;
+}
+
+.dark-mode .weather-container {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .search-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .search-bar input {
+  color: white;
+}
+
+.dark-mode .search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .search-button {
+  background: #ff9800;
+}
+
+.dark-mode .search-button:hover {
+  background: #e68900;
+}
+
+/* Date Styling */
+.date {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Dark Mode Button */
+.toggle-button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.toggle-button:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
